@@ -1,0 +1,20 @@
+.contact_form{
+    border: 1px solid black;
+    width:400px;
+}
+.contact_form>button{
+ margin-top:10px;
+ margin-bottom: 10px;
+}
+.contact_form_label{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+    margin-left: 10px;
+}
+.contact_form_input{
+    width:200px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}

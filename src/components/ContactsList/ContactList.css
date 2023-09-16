@@ -1,0 +1,21 @@
+.contact__list {
+  margin-top: 20px;
+}
+.contact__list__item {
+  margin-top: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.contact__list__number {
+  margin-left: 10px;
+}
+button {
+  margin-left: 8px;
+  text-align: end;
+  background-color: whitesmoke;
+  border-color: floralwhite;
+  border-radius: 3px;
+  cursor: pointer;
+}
+button:active {
+  background-color: darkseagreen;
+}

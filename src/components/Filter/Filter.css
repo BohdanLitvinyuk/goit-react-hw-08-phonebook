@@ -1,0 +1,10 @@
+.filter__title{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: 500;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.filter__title>input{
+    width: 200px;
+}
