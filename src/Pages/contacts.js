@@ -1,8 +1,8 @@
 
-import { ContactsForm } from './ContactsForm/ContactsForm';
-import { Section } from './Section/Section';
-import { ContactList } from './ContactsList/ContactList';
-import Filter from './Filter/Filter';
+import { ContactsForm } from '../components/ContactsForm/ContactsForm';
+import { Section } from '../components/Section/Section';
+import { ContactList } from '../components/ContactsList/ContactList';
+import Filter from '../components/Filter/Filter';
 import { useDispatch } from 'react-redux';
 import { addContact } from 'redux/Contacts/contactsOperation';
 

@@ -4,52 +4,25 @@
 // import Filter from './Filter/Filter';
 // import { useDispatch } from 'react-redux';
 // import { addContact } from 'redux/Contacts/contactsOperation';
-import { Routes, Route, NavLink } from "react-router-dom";
-import styled from "styled-components";
-import { Home } from './Home';
-import { Contacts } from './contacts';
-
-const StyledLink = styled(NavLink)`
-  color: black;
-  margin:20px;
-  &.active {
-    color: orange;
-  }
-`;
+import { Routes, Route } from 'react-router-dom';
+import { Home } from '../Pages/Home';
+import { Contacts } from '../Pages/contacts';
+import { Layout } from './Layout';
+import { LoginForm } from './LoginForm/LoginForm';
+import { RegisterForm } from './RegisteForm/RegisterForm';
 
 export function App() {
-
-
   return (
     <div>
-    <nav>
-      <StyledLink to="/" end>
-        Home
-      </StyledLink>
-      <StyledLink to="/about">About</StyledLink>
-
-      <StyledLink to="/contacts">Contacts</StyledLink>
-    </nav>
-
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<div>about</div>} />
-      <Route path="/contacts" element={<Contacts/>} />
-    </Routes>
-  </div>
-
-);
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          {/* <Route path="/" element={<Home />} /> */}
+          <Route path="/contacts" element={<Contacts />} />
+          <Route path="/register" element={<RegisterForm/>}/>
+          <Route path="/login" element ={<LoginForm/>}/>
+        </Route>
+      </Routes>
+    </div>
+  );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
