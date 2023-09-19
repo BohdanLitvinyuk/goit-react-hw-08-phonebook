@@ -7,7 +7,7 @@ export function ContactsForm({ onSubmit }) {
 
   const [contact, setContact] = useState({
     name: '',
-    phone: '',
+    number: '',
   });
 
   const handleChange = evt => {
@@ -19,7 +19,7 @@ export function ContactsForm({ onSubmit }) {
   };
 
   const reset = () => {
-    setContact({ phone: '', name: '' });
+    setContact({ number: '', name: '' });
   };
 
   const addContact = evt => {
@@ -32,8 +32,8 @@ export function ContactsForm({ onSubmit }) {
       alert(`${contact.name} is already exist`);
       reset();
     } else {
-      const { name, phone } = contact;
-      const newContact = { name, phone };
+      const { name, number } = contact;
+      const newContact = { name, number };
       onSubmit(newContact);
       reset();
     }
@@ -58,8 +58,8 @@ export function ContactsForm({ onSubmit }) {
         Number
         <input
           type="tel"
-          name="phone"
-          value={contact.phone}
+          name="number"
+          value={contact.number}
           pattern="^[+]?[0-9\\.\\-\\s]{1,15}$"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required

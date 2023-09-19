@@ -8,7 +8,7 @@ import { addContact } from 'redux/Contacts/contactsOperation';
 
 
 
-export const Contacts=()=>{
+const Contacts=()=>{
     
 const dispatch=useDispatch();
 
@@ -22,3 +22,4 @@ const addNewContact = (contact) => dispatch(addContact(contact));
     </Section> 
     )
 }
+export default Contacts;
