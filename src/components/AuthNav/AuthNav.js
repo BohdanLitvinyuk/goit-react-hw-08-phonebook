@@ -6,7 +6,7 @@ const StyledLink = styled(NavLink)`
   color: black;
   margin:20px;
   &.active {
-    color: orange;
+    color:rgb(25,118,210);
   }
 `;
 export const AuthNav =()=>{
