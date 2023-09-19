@@ -10,6 +10,10 @@ import { Contacts } from '../Pages/contacts';
 import { Layout } from './Layout';
 import { LoginForm } from './LoginForm/LoginForm';
 import { RegisterForm } from './RegisteForm/RegisterForm';
+import { useSelector } from 'react-redux';
+import { selectIsLoggedIn } from 'redux/auth/selectors';
+import Register from 'Pages/register';
+import Login from 'Pages/Login';
 
 export function App() {
   return (
@@ -19,8 +23,8 @@ export function App() {
           <Route index element={<Home />} />
           {/* <Route path="/" element={<Home />} /> */}
           <Route path="/contacts" element={<Contacts />} />
-          <Route path="/register" element={<RegisterForm/>}/>
-          <Route path="/login" element ={<LoginForm/>}/>
+          <Route path="/register" element={<Register/>}/>
+          <Route path="/login" element ={<Login/>}/>
         </Route>
       </Routes>
     </div>
