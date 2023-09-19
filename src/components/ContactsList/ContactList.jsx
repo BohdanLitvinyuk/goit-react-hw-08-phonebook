@@ -30,21 +30,14 @@ export const ContactList = () => {
   }, [contacts, filter]);
 
 
-  // const getFilteredContact = () => {
-  //   const normalizeFilter = filter.toLowerCase();
-  //   return contacts.filter(contact =>
-  //     contact.name.toLowerCase().includes(normalizeFilter)
-  //   );
-  // };
-
-  // const filteredContact = getFilteredContact();
+  
 
   return (
     <ol className="contact__list">
-      {visibleContacts.map(({ id, name, phone }) => {
+      {visibleContacts.map(({ id, name, number }) => {
         return (
           <li key={id} id={id} className="contact__list__item">
-            {name}:<span className="contact__list__number">{phone}</span>
+            {name}:<span className="contact__list__number">{number}</span>
             <button
               type="button"
               onClick={() => dispatch(deleteContact({ id }))}

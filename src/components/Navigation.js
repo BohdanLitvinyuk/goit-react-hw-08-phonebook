@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux"
 
+import { selectIsLoggedIn } from "redux/auth/selectors"
 const StyledLink = styled(NavLink)`
   color: black;
   margin:20px;
@@ -9,12 +11,14 @@ const StyledLink = styled(NavLink)`
   }
 `;
 export const Navigation = ()=>{
+  const isLoggedIn = useSelector(selectIsLoggedIn); 
+
     return (
         <nav>
       <StyledLink to="/" end>
         Home
       </StyledLink>
-      <StyledLink to="/contacts">Contacts</StyledLink>
-    </nav>
+{  isLoggedIn&&(<StyledLink to="/contacts">Contacts</StyledLink>)}    
+</nav>
     )
 }
