@@ -4,10 +4,14 @@ import { useSelector } from "react-redux"
 
 import { selectIsLoggedIn } from "redux/auth/selectors"
 const StyledLink = styled(NavLink)`
-  color: black;
+  color: white;
+  font-weight: 700;
+  text-decoration:none;
+
   margin:20px;
   &.active {
-    color: rgb(25,118,210);
+    text-decoration:underline 2px;
+    /* color: rgb(25,118,210); */
   }
 `;
 export const Navigation = ()=>{

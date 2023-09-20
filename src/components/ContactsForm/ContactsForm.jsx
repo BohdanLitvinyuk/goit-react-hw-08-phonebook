@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './ContactForm.css';
 import { useSelector } from 'react-redux';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 export function ContactsForm({ onSubmit }) {
   const contacts = useSelector(state => state.phoneBook.contacts.items);
@@ -43,7 +45,10 @@ export function ContactsForm({ onSubmit }) {
     <form onSubmit={addContact} className="contact_form">
       <label className="contact_form_label">
         Name
-        <input
+        <TextField 
+        fullWidth
+        size="small"
+        placeholder="enter a name"
           type="text"
           name="name"
           value={contact.name}
@@ -52,11 +57,15 @@ export function ContactsForm({ onSubmit }) {
           required
           onChange={handleChange}
           className="contact_form_input"
+          
         />
       </label>
       <label className="contact_form_label">
         Number
-        <input
+        <TextField
+        fullWidth
+        size="small"
+        placeholder="enter a number"
           type="tel"
           name="number"
           value={contact.number}
@@ -67,7 +76,7 @@ export function ContactsForm({ onSubmit }) {
           className="contact_form_input"
         />
       </label>
-      <button type="submit"> Add contact</button>
+      <Button className='form__button' type="submit" variant="contained" size='small'> Add contact</Button>
     </form>
   );
 }

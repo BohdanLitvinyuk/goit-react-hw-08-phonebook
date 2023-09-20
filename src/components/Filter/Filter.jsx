@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Filter.css';
 import { useSelector, useDispatch } from 'react-redux';
+import TextField from '@mui/material/TextField';
 
 import { filteredContact } from '../../redux/phoneBookSlice';
 
@@ -14,8 +15,8 @@ const Filter = () => {
   };
   return (
     <label className="filter__title">
-      Find contacts by name
-      <input type="text" value={value} onChange={changeFilter} />
+      {/* Find contacts by name */}
+      <TextField type="text" value={value} onChange={changeFilter} placeholder='Search contact  by name' />
     </label>
   );
 };

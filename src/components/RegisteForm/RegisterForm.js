@@ -41,7 +41,7 @@ export const RegisterForm = () => {
           <Box
             component="form"
             onSubmit={handleSubmit}
-            noValidate
+      
             sx={{ mt: 1 }}
           >
             <TextField
@@ -49,7 +49,6 @@ export const RegisterForm = () => {
               type="text"
               required
               fullWidth
-              id="name"
               label="UserName"
               name="name"
               autoComplete="name"
@@ -60,7 +59,6 @@ export const RegisterForm = () => {
               type="email"
               required
               fullWidth
-              id="email"
               label="Email Address"
               name="email"
               autoComplete="email"

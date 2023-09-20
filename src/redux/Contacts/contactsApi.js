@@ -5,7 +5,6 @@ export async function getContacts() {
   return data;
 }
 export async function addContact(data) {
-  console.log(data)
   const result = await axios.post('/contacts',data);
   return result.data;
 }

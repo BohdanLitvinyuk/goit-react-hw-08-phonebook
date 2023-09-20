@@ -1,21 +1,45 @@
 .contact__list {
   margin-top: 20px;
+  padding: 0;
 }
 .contact__list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 320px;
   margin-top: 10px;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  border: 1px transparent;
+  border-radius: 5px;
+  box-shadow: -10px 8px 18px -16px rgba(66, 68, 90, 1);
+padding: 3px 5px ;
+background-color:#fcfafa;
+
 }
 .contact__list__number {
-  margin-left: 10px;
+margin-top: 5px;}
+.contact__list__name{
+  margin: 0;
+  color: #1976d2;
+
 }
-button {
+/* button {
   margin-left: 8px;
   text-align: end;
   background-color: whitesmoke;
   border-color: floralwhite;
   border-radius: 3px;
   cursor: pointer;
-}
-button:active {
+} */
+/* button:active {
   background-color: darkseagreen;
+} */
+.contact__list__card{
+display: flex;
+flex-direction: column;
+padding: 2px 0 3px 5px;
+
+}
+.delete__button{
+
 }
